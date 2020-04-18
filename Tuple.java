@@ -21,22 +21,22 @@ class Solution {
     }
     
     public static String[] preprocessing(String s) {
-		String[] res = s.substring(1, s.length()-1).split("\\},\\{");
-		res[0] = res[0].substring(1, res[0].length());
-		res[res.length-1] = res[res.length-1].substring(0, res[res.length-1].length()-1);
+	String[] res = s.substring(1, s.length()-1).split("\\},\\{");
+	res[0] = res[0].substring(1, res[0].length());
+	res[res.length-1] = res[res.length-1].substring(0, res[res.length-1].length()-1);
 	
-		Arrays.sort(res, new StringComp());
-		return res;
-	}
+	Arrays.sort(res, new StringComp());
+	return res;
+    }
 	
-	public static int input(String s) {
-		int tmp = 0;
-		String[] arr = s.split(",");
-		for(int i=0; i<arr.length; i++) {
-			tmp = Integer.parseInt(arr[i]);
-			if(!tuple.contains(tmp)) break;
-		}
-		tuple.add(tmp);
-		return tmp;
+    public static int input(String s) {
+	int tmp = 0;
+	String[] arr = s.split(",");
+	for(int i=0; i<arr.length; i++) {
+		tmp = Integer.parseInt(arr[i]);
+		if(!tuple.contains(tmp)) break;
 	}
+	tuple.add(tmp);
+	return tmp;
+    }	
 }
