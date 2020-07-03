@@ -22,7 +22,6 @@ class Solution {
 
     static int removeNum(int d, int[] rocks, int distance, int n) {
         int prev = 0, cnt = 0;
-
         for (int i = 0; i < rocks.length; ++i) {
             if (rocks[i] - prev < d) cnt++;
             else prev = rocks[i];
